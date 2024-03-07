@@ -1,2 +1,3 @@
-# wp-html-element
+# HTML Element Gutenberg Block
+
 A Gutenberg block that allows to create HTML elements as blocks

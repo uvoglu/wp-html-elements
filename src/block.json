@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "html/element",
+	"version": "0.1.0",
+	"title": "HTML Element",
+	"category": "design",
+	"icon": "html",
+	"description": "A block that allows to create HTML elements as blocks.",
+	"supports": {
+		"html": false,
+		"anchor": false,
+		"className": false,
+		"customClassName": false
+	},
+	"textdomain": "html-element",
+	"attributes": {
+		"tagName": {
+			"type": "string",
+			"default": "div"
+		},
+		"anchor": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "id",
+			"selector": "*"
+		},
+		"className": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "class",
+			"selector": "*"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
