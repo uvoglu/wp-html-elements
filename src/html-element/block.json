@@ -4,16 +4,15 @@
 	"name": "html/element",
 	"version": "0.1.0",
 	"title": "HTML Element",
-	"category": "design",
-	"icon": "html",
-	"description": "A block that allows to create HTML elements as blocks.",
+	"category": "html-elements",
+	"description": "A block that allows to create a HTML element as a block.",
 	"supports": {
 		"html": false,
 		"anchor": false,
 		"className": false,
 		"customClassName": false
 	},
-	"textdomain": "html-element",
+	"textdomain": "html-elements",
 	"attributes": {
 		"tagName": {
 			"type": "string",
@@ -33,6 +32,6 @@
 		}
 	},
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"editorStyle": "file:../index.css",
+	"style": "file:../style-index.css"
 }

@@ -1,10 +1,10 @@
 import { InnerBlocks, InspectorControls, useBlockProps } from '@wordpress/block-editor'
 import { TextControl, PanelBody } from '@wordpress/components'
 import { __ } from '@wordpress/i18n'
-import './editor.scss'
+import '../editor.scss'
 
 /**
- * Render inspector controls for the Group block.
+ * Render inspector controls for the HTML Element block.
  *
  * @param {Object} props Component props.
  * @param {string} props.tagName The HTML tag name.
@@ -14,7 +14,7 @@ import './editor.scss'
  * @param {Function} props.onChangeAnchor onChange function for the ID TextControl.
  * @param {Function} props.onChangeClassName onChange function for the className TextControl.
  *
- * @return {JSX.Element}                The control group.
+ * @return {JSX.Element} The control group.
  */
 function EditControls( {
 	tagName,
@@ -27,24 +27,24 @@ function EditControls( {
 	return (
 		<InspectorControls>
 			<PanelBody
-				title={ __( 'Settings' ) }
+				title={ __( 'Settings', 'html-elements' ) }
 				initialOpen={ true }
 			>
 				<TextControl
-					label={ __( 'Tag' ) }
-					help={ __( 'The tag name to use for this HTML element' ) }
+					label={ __( 'Tag', 'html-elements' ) }
+					help={ __( 'The tag name to use for this HTML element', 'html-elements' ) }
 					value={ tagName }
 					onChange={ onChangeTagName }
 				/>
 				<TextControl
-					label={ __( 'ID' ) }
-					help={ __( 'The ID to use for this HTML element' ) }
+					label={ __( 'ID', 'html-elements' ) }
+					help={ __( 'The ID to use for this HTML element', 'html-elements' ) }
 					value={ anchor }
 					onChange={ onChangeAnchor }
 				/>
 				<TextControl
-					label={ __( 'Class' ) }
-					help={ __( 'The classes to use for this HTML element' ) }
+					label={ __( 'Class', 'html-elements' ) }
+					help={ __( 'The classes to use for this HTML element', 'html-elements' ) }
 					value={ className }
 					onChange={ onChangeClassName }
 				/>
