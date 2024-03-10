@@ -1,5 +1,5 @@
 import { InnerBlocks, InspectorControls, useBlockProps } from '@wordpress/block-editor'
-import { TextControl, PanelBody } from '@wordpress/components'
+import { TextareaControl, TextControl, PanelBody } from '@wordpress/components'
 import { __ } from '@wordpress/i18n'
 import '../editor.scss'
 
@@ -42,7 +42,7 @@ function EditControls( {
 					value={ anchor }
 					onChange={ onChangeAnchor }
 				/>
-				<TextControl
+				<TextareaControl
 					label={ __( 'Class', 'html-elements' ) }
 					help={ __( 'The classes to use for this HTML element', 'html-elements' ) }
 					value={ className }

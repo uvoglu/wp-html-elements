@@ -1,4 +1,4 @@
-import { textColor as icon } from '@wordpress/icons'
+import { html as icon } from '@wordpress/icons'
 
 export default function settings( { defaultBlockLabel } ) {
 	return {

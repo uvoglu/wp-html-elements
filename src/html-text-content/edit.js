@@ -1,5 +1,5 @@
 import { InspectorControls } from '@wordpress/block-editor'
-import { TextControl, PanelBody } from '@wordpress/components'
+import { TextareaControl, PanelBody } from '@wordpress/components'
 import { RawHTML } from '@wordpress/element'
 import { __ } from '@wordpress/i18n'
 import '../editor.scss'
@@ -23,7 +23,7 @@ function EditControls( {
 				title={ __( 'Settings', 'html-elements' ) }
 				initialOpen={ true }
 			>
-				<TextControl
+				<TextareaControl
 					label={ __( 'Text Content', 'html-elements' ) }
 					help={ __( 'The text content of the element', 'html-elements' ) }
 					value={ content }
