@@ -21,17 +21,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Registers a custom category for the blocks provided by this plugin.
  */
 function html_elements_add_block_category( $block_categories, $editor_context ) {
-    if ( ! empty( $editor_context->post ) ) {
-        array_push(
-            $block_categories,
-            array(
-                'slug'  => 'html-elements',
-                'title' => __( 'HTML Elements', 'html-elements' ),
-                'icon'  => null,
-            )
-        );
-    }
-    return $block_categories;
+	array_push(
+		$block_categories,
+		array(
+			'slug'  => 'html-elements',
+			'title' => __( 'HTML Elements', 'html-elements' ),
+			'icon'  => null,
+		)
+	);
+	return $block_categories;
 }
 
 add_filter( 'block_categories_all', 'html_elements_add_block_category', 10, 2 );

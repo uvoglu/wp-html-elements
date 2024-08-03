@@ -1,4 +1,4 @@
-import { InnerBlocks, InspectorControls, useBlockProps } from '@wordpress/block-editor'
+import { InnerBlocks, InspectorControls, useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor'
 import { TextareaControl, TextControl, PanelBody } from '@wordpress/components'
 import { __ } from '@wordpress/i18n'
 import '../editor.scss'
@@ -71,6 +71,15 @@ export default function Edit( {
 	} = attributes
 	const TagName = tagName || 'div'
 
+	const blockProps = useBlockProps( {
+		id: anchor,
+		className,
+	} )
+    const innerBlocksProps = useInnerBlocksProps( {
+		...blockProps,
+		renderAppender: isSelected && InnerBlocks.ButtonBlockAppender
+	} )
+
 	return (
 		<>
 			<EditControls
@@ -87,11 +96,7 @@ export default function Edit( {
 					setAttributes( { className: value || null } )
 				}
 			/>
-			<TagName { ...useBlockProps( { id: anchor, className } ) }>
-				<InnerBlocks
-					renderAppender={ isSelected && InnerBlocks.ButtonBlockAppender }
-				/>
-			</TagName>
+			<TagName { ...innerBlocksProps } />
 		</>
 	)
 }

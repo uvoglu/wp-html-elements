@@ -4,7 +4,6 @@
 	"description": "A block that allows to create HTML elements as blocks.",
 	"author": "UVOGLU",
 	"license": "GPL-2.0-or-later",
-	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
