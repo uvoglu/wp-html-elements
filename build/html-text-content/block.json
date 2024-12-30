@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "html/text-content",
+  "version": "0.1.0",
+  "title": "HTML Text Content",
+  "category": "html-elements",
+  "description": "A block that allows to create HTML text content as a block.",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": false,
+    "customClassName": false
+  },
+  "textdomain": "html-elements",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:../index.css",
+  "style": "file:../style-index.css"
+}
